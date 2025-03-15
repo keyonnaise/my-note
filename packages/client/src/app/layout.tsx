@@ -1,15 +1,15 @@
+import clsx from "clsx";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../styles/global.css";
+import localFont from "next/font/local";
+import { darkTheme } from "~/styles/theme.css";
+import * as styles from "./layout.css";
+import "~/styles/global.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const pretendard = localFont({
+  src: "../assets/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko-KR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+    <html lang="ko-KR" className={clsx(darkTheme, pretendard.variable)}>
+      <body className={clsx(styles.container)}>{children}</body>
     </html>
   );
 }

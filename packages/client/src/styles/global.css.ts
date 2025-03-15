@@ -32,7 +32,7 @@ globalStyle("html, :host", {
       lineHeight: 1.5, // 1
       WebkitTextSizeAdjust: "100%", // 2
       tabSize: 4, // 3
-      fontFamily: "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'", // 4
+      fontFamily: "var(--font-pretendard), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'", // 4
       fontFeatureSettings: "normal", // 5
       fontVariationSettings: "normal", // 6
       WebkitTapHighlightColor: "transparent", // 7
