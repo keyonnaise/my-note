@@ -1,14 +1,45 @@
+import { createVar } from "@vanilla-extract/css";
+import { calc } from "@vanilla-extract/css-utils";
 import { RecipeVariants, recipe } from "@vanilla-extract/recipes";
+import theme from "~/styles/theme.css";
+
+export const vars = {
+  lineClamp: createVar(),
+};
 
 export const typography = recipe({
   base: {
     selectors: {
-      ["& + &"]: {
+      "& + &": {
         marginTop: "0.5lh",
       },
     },
   },
   variants: {
+    color: {
+      main: {
+        color: theme.text.main,
+      },
+      sub: {
+        color: theme.text.sub,
+      },
+      third: {
+        color: theme.text.third,
+      },
+
+      info: {
+        color: theme.info.main,
+      },
+      danger: {
+        color: theme.danger.main,
+      },
+      success: {
+        color: theme.success.main,
+      },
+      warning: {
+        color: theme.warning.main,
+      },
+    },
     size: {
       "2xs": {
         fontSize: "10px",
@@ -71,6 +102,23 @@ export const typography = recipe({
       },
       black: {
         fontWeight: 900,
+      },
+    },
+    truncate: {
+      true: {
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+      },
+    },
+    lineClamp: {
+      true: {
+        overflow: "hidden",
+        display: "-webkit-box",
+        height: calc.multiply(vars.lineClamp, "1lh"),
+        WebkitLineClamp: vars.lineClamp,
+        WebkitBoxOrient: "vertical",
+        textWrap: "wrap",
       },
     },
   },
