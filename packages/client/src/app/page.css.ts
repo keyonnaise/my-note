@@ -3,9 +3,8 @@ import { calc } from "@vanilla-extract/css-utils";
 import media, { breakpoints } from "~/styles/media.css";
 
 export const header = style({
-  position: "relative",
-  flexGrow: 0,
-  flexBasis: "auto",
+  position: "absolute",
+  inset: "8px 0 auto 0",
 });
 
 export const main = style({
@@ -23,7 +22,7 @@ export const footer = style({
 
 export const content = style([
   {
-    width: `min(${breakpoints.xs}px. ${calc.subtract("100%", "24px")})`,
+    width: `min(${breakpoints.xs}px, ${calc.subtract("100%", "24px")})`,
     paddingBlock: "80px",
     marginInline: "auto",
   },
