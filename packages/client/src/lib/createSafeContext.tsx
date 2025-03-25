@@ -9,6 +9,7 @@ export function createSafeContext<T extends object | null>(
   const Context = createContext<T | undefined>(defaultValue);
 
   const Provider = ({ children, ...rest }: React.PropsWithChildren<T>) => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const value = useMemo(() => rest, Object.values(rest)) as T;
     return <Context value={value}>{children}</Context>;
   };

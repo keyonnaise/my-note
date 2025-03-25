@@ -30,7 +30,7 @@ export default function Home() {
           <Typography as="h2" weight="extraBold">
             Hi there 👋
             <br />
-            Keyonnaise's blog
+            Keyonnaise&apos;s blog
           </Typography>
           <Spacer y={20} />
           <div>전체 글</div>

@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   try {
     const decodedClaims = await admin.auth.verifySessionCookie(session, true);
     return NextResponse.json({ uid: decodedClaims.uid });
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 }
