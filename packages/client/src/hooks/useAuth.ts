@@ -22,7 +22,7 @@ export function useAuth() {
 
       const userCredential = await signInWithEmailAndPassword(client.auth, email, password);
       const idToken = await userCredential.user.getIdToken();
-      await fetch("/api/verify-id-token", {
+      await fetch("/api/auth/verify-id-token", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idToken }),

@@ -8,7 +8,7 @@ export async function middleware(req: NextRequest) {
   }
 
   try {
-    const response = await fetch(new URL("/api/verify-session-cookie", req.url), {
+    const response = await fetch(new URL("/api/auth/verify-session-cookie", req.url), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ session }),
