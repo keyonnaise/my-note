@@ -9,6 +9,8 @@ export const vars = {
 
 export const typography = recipe({
   base: {
+    lineHeight: 1.5,
+
     selectors: {
       "& + &": {
         marginTop: "0.5lh",

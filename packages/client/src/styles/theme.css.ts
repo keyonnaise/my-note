@@ -32,6 +32,17 @@ const common = createGlobalTheme(":root", {
     lg: [`0 8px 8px -4px ${setAlphaToHex(palette.black, 0.1)}`, `0 16px 32px 8px ${setAlphaToHex(palette.black, 0.05)}`].join(", "),
     xl: [`0 10px 10px -5px ${setAlphaToHex(palette.black, 0.1)}`, `0 20px 40px 10px ${setAlphaToHex(palette.black, 0.05)}`].join(", "),
   },
+  weights: {
+    thin: "100",
+    extraLight: "200",
+    light: "300",
+    regular: "400",
+    medium: "500",
+    semiBold: "600",
+    bold: "700",
+    extraBold: "800",
+    black: "900",
+  },
 });
 
 const colors = createThemeContract({
