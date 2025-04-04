@@ -2,7 +2,8 @@ import { camelCase, snakeCase } from "es-toolkit";
 import { forEach, isEmpty } from "es-toolkit/compat";
 import { CollectionReference, DocumentSnapshot } from "firebase-admin/firestore";
 import * as admin from "~/lib/firebase/admin";
-import { IPost, SnakeToCamelCaseNested } from "./types";
+import { IPost } from "./post.type";
+import { SnakeToCamelCaseNested } from "./types";
 
 export const collections = {
   posts: getCollectionWithConverter<IPost>(admin.db.collection("posts")),

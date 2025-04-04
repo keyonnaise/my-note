@@ -6,7 +6,7 @@ import Divider from "~/components/atom/Divider";
 import Spacer from "~/components/atom/Spacer";
 import Typography from "~/components/atom/Typography";
 import PostList from "./_components/PostList";
-import { IPost } from "./api/_firestore/types";
+import { IPost } from "./api/_firestore/post.type";
 import * as styles from "./page.css";
 
 export default function Home() {
